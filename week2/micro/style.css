@@ -1,0 +1,280 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* обнуления (сброса)  отступов  
+различные браузеры могут иметь различные значения отступов и полей по умолчанию.
+*/
+
+body{
+    font-size: 16px;
+    font: "Segoe UI", "SegoeUI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}           
+.wrapper {/*условии на полный экран*/
+    display: flex;/* 1 2 3 4
+                    display:block->1
+                    2
+                    3
+                    4 которое в дальнейшем позволит ими управлять гораздо проще*/
+    flex-direction: column;
+    height: 100vh;
+    /* размер весь экрана vh */
+}
+
+.content { /* ???????? */
+    flex: 1 1 auto;/* ?????? */
+}
+/* flex-grow: 1: Элемент может увеличиваться в размере в соответствии с оставшимся пространством в контейнере.
+flex-shrink: 1: Элемент может уменьшаться в размере, чтобы соответствовать оставшемуся пространству в контейнере.
+flex-basis: auto: Размер элемента будет определяться автоматически (будет равен его размеру по умолчанию). */
+
+
+.products {
+    margin-top: 185px;
+    height: 500px;
+}
+
+.products__container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;/* именно для флексбл элементов   */
+    flex-wrap: wrap;/* задает многострочную расстановку блоков по главной оси */
+    
+}
+.products__item {
+    max-width: 350px;
+}
+.cart {
+    max-width: 350px;
+}
+.cart>*:not(:last-child) {
+    margin-bottom: 16px;  
+}
+
+.cart__img {
+    position: relative;
+    padding-top: 56%;
+}
+.cart__img img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: contain;   
+    /*  контролирует соотношение сторон и поведение 
+    изображения при изменении размеров его родительского элемента. тип сол контейнерде туру ушин орнын жогалтпай*/
+}
+
+.cart__header {
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+
+.cart__action, .cart__action a {
+    color: #0067b8;
+}
+.cart__action a{
+    text-decoration: none;
+    font-weight: 600;
+}
+.cart__action{
+    line-height: 56px; /* https://habrastorage.org/getpro/habr/post_images/86b/09b/1ec/86b09b1ecc3a6c745bcb2d096e8edeec.png */
+    display: flex;
+    align-items: center;
+    /* флекст досым туралы */
+    /* Это свойство flex-контейнера. 
+    Оно выравнивает дочерние элементы по вертикали в центре контейнера. 
+    Таким образом, элементы внутри flex-контейнера будут центрированы по вертикали. */
+}
+.cart__action i{
+    margin-left: 10px;
+}
+
+
+.toppage__item {
+    justify-content: space-between;/* именно для флексбл элементов   */
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    max-height: 54px;
+}
+.right__part {
+    width: 1145px;
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    margin-left: 10px;
+}
+.text__link {
+    max-width: 1016px;
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+    position: relative; 
+    font-size: 19px;
+    
+}
+.text__link a{
+    text-decoration: none;
+    color: black;
+}
+.text__link a:hover{
+    text-decoration: underline;
+}
+.text__link a:not(:last-child) {
+    margin-right: 30px;
+}
+.img__logo img{
+    object-fit: contain;  
+    max-width: 123px;
+    height: auto;
+    width: 108px;
+    
+}
+.img__logo{
+    position: relative;
+    max-width: 138px;
+    margin-top: -15px;
+}
+
+
+
+.left__part {
+    width: 448px;
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    margin-left: 10px;
+
+}
+.text_action a {
+    color: black;
+
+}
+.text_action a{
+    text-decoration: none;
+}
+.text_action a:hover{
+    text-decoration: underline;
+}
+
+.text_action {
+    line-height: 56px; /* https://habrastorage.org/getpro/habr/post_images/86b/09b/1ec/86b09b1ecc3a6c745bcb2d096e8edeec.png */
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    font-size: 19px;
+    margin-top: -5px;
+
+}
+.text_action i{
+    margin-left: 10px;
+}
+.text_action a{
+    margin-left: 10px;
+}
+
+
+.big__screen{
+    position: relative;
+    max-width: 2880px;
+    max-height: 672px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide_screen{
+   position: relative;
+   max-width: 1920px;
+   max-height: 600px;
+}
+
+.back__img{
+    width: 100%; /* Устанавливаем ширину изображения на 100% от родительского контейнера */
+    height: auto; /* Позволяет изображению сохранять пропорции */
+    display: block;
+}
+
+.into__text{
+    position: absolute;
+    z-index: 1;
+    top: 30%; /* 3омещаем текст на середину вертикали блока */
+    margin-left: 210px;
+    max-width: 558px;
+    max-height: 88px;
+
+}
+.header__info{
+    box-sizing: border-box;
+    max-height:88px ;
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 35px;
+    height: 88px;
+    padding-bottom: 20px;
+    margin-bottom: 19px;
+    margin-top: 10px;
+    margin-left: 3px;
+
+}
+
+.paragraph{
+    font-size: 18px;
+    font-weight: 400;
+    height: 52px;
+    line-height: 27px;
+    margin-left: 4px;
+    text-align: left;
+    width: 558px;
+    color: white;
+}
+.checking__button{
+    position: absolute;
+    left: 11.1%;
+    top: 50%;
+    margin-top: 75px;
+ 
+}
+.checking__button button{
+    border-radius: .125rem;
+    background-color: #0067b8;
+    color: white;
+    text-decoration: none;
+    font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    border: none;
+    text-align: center;
+    width: 272px;
+    height: 44px;
+    padding: .625rem .75rem;
+    font-weight: 400;
+}
+.checking__button button:active{
+    background-color:#015391;
+}
+
+.change__icons{
+    margin-top: 28px;
+    text-align: center;
+    margin-left: 29px;
+}
+.change__icons i {
+    margin-right: 30px; 
+    font-size: 19.5px;
+}
+
+.cart__img3 img{
+    height: 200px;
+}
+
