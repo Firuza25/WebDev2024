@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    position: relative;
+}
+
+
+.header_title {
+    background-color: aqua;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1{
+    font-size: 60px;
+}
+
+.to-do {
+    border-radius: 5px;
+    width: 50%;
+    padding: 20px;
+   margin-left: 700px;
+}
+
+
+.to-do__container {
+    justify-content: center;
+}
+
+
+.to-do__header {
+    margin-bottom: 40px;
+}
+
+.to-do__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.form__item {
+    display: flex;
+    flex-grow: 1;
+}
+
+
+.form__item input {
+    flex-grow: 0.5;
+    height: 60px;
+    width: 70%;
+}
+
+.form__item button {
+    margin-left: 10px;
+    width: 200px;
+}
+
+
+.to-do__list {
+    list-style: none;
+    padding: 40px 0 0 0;
+}
+
+
+.to-do__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px; 
+    margin-bottom: 15px;
+    background-color: aqua;
+}
+
+.item__input {
+    margin-right: 50px;
+}
+
+.item__text {
+    flex-grow: 1;
+}
+
+.item__img {
+    cursor: pointer;
+}
+.item__input {
+    margin-right: 50px;
+}

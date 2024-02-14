@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function powFunc(a,b){
+            let result=a;
+            for(let i=1;i<b ;i++){
+                result*=a;
+            }
+            return result;
+        }
+
+        let a = prompt('a?','');
+        let b = prompt('b?','');
+
+        if (b < 1) {
+        alert(`Power ${b} is not supported, use a positive integer`);
+        } else {
+        alert( powFunc(a, b) );
+        }
+
+    </script>
+</body>
+</html>
