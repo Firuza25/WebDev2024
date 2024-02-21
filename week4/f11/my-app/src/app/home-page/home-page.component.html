@@ -1,0 +1,55 @@
+<!-- home-page.component.html -->
+<div class="sneakers__imgs">
+    <ul>
+        <li *ngFor="let sneakerss of sneakers">
+            <a>
+                <img src="{{sneakerss.imageUrl}}" alt="">
+                <div class="content">
+                    <div class="name">
+                        {{sneakerss.name}}
+                    </div>
+                    <span class="favorite {{sneakerss.favorite?'':'not'}}">
+                        ♥︎
+                    </span>
+                   <div class="products__description">
+                    <div class="price"> 
+                      <span>
+                       price: {{sneakerss.price}}
+                      </span>
+                    </div>
+                    <div class="color"> 
+                        <span>
+                         color: {{sneakerss.color}}
+                        </span>
+                      </div>
+                      <div class="color"> 
+                        <span>
+                          Size: {{sneakerss.size}}
+                        </span>
+                      </div>
+
+
+
+                      <div class="share">
+                        <a href="https://t.me/share/url?url={{ sneakerss }}&text=Look!">
+                          <button>share</button>
+                        </a>
+                      </div>
+                    
+                      <div class="buy">
+                       
+                       
+                          <button>
+                            BUY</button>
+                      
+                       
+                      </div>
+                    
+
+                   </div>
+                </div>
+            </a>
+           
+        </li>
+    </ul>
+</div>
